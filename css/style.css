@@ -51,6 +51,8 @@ section {
 }
 
 .box {
+    position: relative;
+    top: 45%;
     background: repeating-linear-gradient(-45deg,
             white,
             white 10px,
@@ -91,20 +93,22 @@ section {
 .lidTieContainer {
     margin: auto;
     width: 200px;
-    /* animation: lid 1s; */
-    /* animation-timing-function: ease; */
+    position: relative;
+    top: 45%;
     animation-name: lid;
     animation-delay: 3s;
     animation-duration: 3s;
 }
 
+
+/* Box lid slide up animation */
 @keyframes lid {
     0% {
-        margin: 50% auto 0;
+        top: 45%;
     }
 
     100% {
-        margin: 0 auto;
+        top: -100px;
     }
 }
 
