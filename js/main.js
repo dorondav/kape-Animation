@@ -1,7 +1,12 @@
-// var box = document.getElementsByClassName("box");
+window.onload = function () {
 
-// // Add Box animation 
-// setInterval(function () { box.classList.add("boxAnimation"); }, 3000);
+    var lid = document.querySelector(".lidTieContainer");
 
-// // Remove the box animation after 3 seconds 
-// // setTimeout(function () { alert("Hello"); }, 3000);
+    // // Add Box animation 
+    // setInterval(function () { box.classList.add("boxAnimation"); }, 3000);
+
+    // // Remove the box animation after 3 seconds 
+    // setTimeout(function () {
+    //     lid.style.display = "none";
+    // }, 5500);
+}

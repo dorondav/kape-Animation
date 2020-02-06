@@ -23,6 +23,7 @@ svg {
 
 .waveOne {
     fill: #fca952;
+
 }
 
 .waveTwo {
@@ -34,10 +35,10 @@ svg {
 
 section {
     width: 30%;
+    height: 100vh;
+    position: relative;
     z-index: 200;
     margin: auto;
-    position: relative;
-    top: 45vh;
 }
 
 .boxLid {
@@ -46,11 +47,10 @@ section {
     width: 200px;
     height: 45px;
 
+
 }
 
 .box {
-    /* background: white; */
-    color: white;
     background: repeating-linear-gradient(-45deg,
             white,
             white 10px,
@@ -86,6 +86,30 @@ section {
     }
 }
 
+/* Lid Tie style */
+
+.lidTieContainer {
+    margin: auto;
+    width: 200px;
+    /* animation: lid 1s; */
+    /* animation-timing-function: ease; */
+    animation-name: lid;
+    animation-delay: 3s;
+    animation-duration: 3s;
+}
+
+@keyframes lid {
+    0% {
+        margin: 50% auto 0;
+    }
+
+    100% {
+        margin: 0 auto;
+    }
+}
+
+
+/* External lid wrapper */
 .lidWrapper,
 .boxWrapper {
     width: 22%;
@@ -101,12 +125,90 @@ section {
     background: #09d1c2;
 }
 
-.lidWrapperTie {
-    width: 0;
-    height: 0;
-    border-top: 25px solid transparent;
-    border-left: 50px solid #09d1c2;
-    border-bottom: 25px solid transparent;
-    border-bottom-left-radius: 25px;
-    margin: auto;
+.leftOuterTie {
+    background: #09d1c2;
+    margin: -61px 56px;
+    float: left;
+}
+
+.rightOuterTie {
+    background: #09d1c2;
+    margin: -45px 37px;
+    float: right;
+}
+
+/* Internal lid wrapper */
+
+.leftInternalTie {
+    background: #fac464;
+    margin: -28px 80px;
+    float: left;
+}
+
+.rightInternalTie {
+    background: #fac464;
+    margin: -22px 69px;
+    float: right;
+}
+
+.rightInternalTie,
+.rightInternalTie:before,
+.rightInternalTie:after,
+.leftInternalTie,
+.leftInternalTie:before,
+.leftInternalTie:after {
+    width: 15px;
+    height: 15px;
+    border-top-right-radius: 30%;
+}
+
+/* All Ties styling  */
+
+.rightInternalTie:before,
+.rightInternalTie:after,
+.leftInternalTie:before,
+.leftInternalTie:after,
+.rightOuterTie:before,
+.rightOuterTie:after,
+.leftOuterTie:before,
+.leftOuterTie:after {
+    content: '';
+    position: absolute;
+    background: inherit;
+}
+
+.rightOuterTie,
+.rightOuterTie:before,
+.rightOuterTie:after,
+.leftOuterTie,
+.leftOuterTie:before,
+.leftOuterTie:after {
+    width: 40px;
+    height: 40px;
+    border-top-right-radius: 30%;
+}
+
+.leftInternalTie,
+.leftOuterTie {
+    transform: rotate(-45deg) skewX(-30deg) scale(1, .866);
+}
+
+.rightInternalTie,
+.rightOuterTie {
+    transform: rotate(45deg) skewX(-30deg) scale(1, .866);
+
+}
+
+.rightInternalTie:before,
+.leftInternalTie:before,
+.rightOuterTie:before,
+.leftOuterTie:before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
+}
+
+.rightInternalTie:after,
+.leftInternalTie:after,
+.rightOuterTie:after,
+.leftOuterTie:after {
+    transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
 }
