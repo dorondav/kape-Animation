@@ -11,6 +11,7 @@ body {
     height: 100%;
 }
 
+/* BackGround SVG style */
 svg {
     position: fixed;
     bottom: 0;
@@ -25,6 +26,87 @@ svg {
 }
 
 .waveTwo {
-    fill: rgb(255, 170, 34, 0.5);
-    /* opacity: 0.5; */
+    fill: #ffaa22;
+    opacity: 0.5;
+}
+
+/* Box Style */
+
+section {
+    width: 30%;
+    z-index: 200;
+    margin: auto;
+    position: relative;
+    top: 45vh;
+}
+
+.boxLid {
+    background: #ff6359;
+    margin: auto;
+    width: 200px;
+    height: 45px;
+
+}
+
+.box {
+    /* background: white; */
+    color: white;
+    background: repeating-linear-gradient(-45deg,
+            white,
+            white 10px,
+            #ff4047 10px,
+            #ff4047 25px);
+    margin: auto;
+    width: 180px;
+    height: 180px;
+    animation-name: boxSize;
+    animation-duration: 3s;
+}
+
+
+@keyframes boxSize {
+    0% {
+        width: 180px;
+        border-radius: 0px;
+    }
+
+    25% {
+        width: 200px;
+        border-radius: 20px/60px;
+    }
+
+    50% {
+        width: 180px;
+        border-radius: 0px;
+    }
+
+    100% {
+        width: 200px;
+        border-radius: 20px/60px;
+    }
+}
+
+.lidWrapper,
+.boxWrapper {
+    width: 22%;
+    height: 100%;
+    margin: auto;
+}
+
+.boxWrapper {
+    background: #04b4a7;
+}
+
+.lidWrapper {
+    background: #09d1c2;
+}
+
+.lidWrapperTie {
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-left: 50px solid #09d1c2;
+    border-bottom: 25px solid transparent;
+    border-bottom-left-radius: 25px;
+    margin: auto;
 }
