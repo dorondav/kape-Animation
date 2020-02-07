@@ -1,12 +1,21 @@
 window.onload = function () {
 
     var lid = document.querySelector(".lidTieContainer");
-    // // Add Box animation 
-    // setInterval(function () { box.classList.add("boxAnimation"); }, 3000);
+    var light = document.querySelector(".lightPlaceholder");
+    var canvas = this.document.getElementById("canvas");
 
-    // // Remove the box animation after 3 seconds 
+    // Set Timeouts
+    // Hide  the box lid after animation
     setTimeout(function () {
         lid.style.visibility = "hidden";
     }, 5000);
+    // Set light background when box opens 
+    // setTimeout(function () {
+    //     light.classList.add("light");
+    // }, 3200);
+
+
+    // Canvas
+
 
 }
