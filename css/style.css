@@ -1,5 +1,5 @@
 body {
-
+    overflow: hidden;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -10,8 +10,6 @@ body {
     width: 100%;
     height: 100%;
 }
-
-
 
 /* BackGround SVG style */
 svg {
@@ -34,7 +32,6 @@ svg {
 }
 
 /* Box Style */
-
 section {
     width: 30%;
     height: 100vh;
@@ -48,8 +45,6 @@ section {
     margin: auto;
     width: 200px;
     height: 45px;
-
-
 }
 
 .box {
@@ -67,7 +62,6 @@ section {
     animation-duration: 3s;
     /* z-index: 400; */
 }
-
 
 @keyframes boxSize {
     0% {
@@ -92,7 +86,6 @@ section {
 }
 
 /* Lid Tie style */
-
 .lidTieContainer {
     margin: auto;
     width: 200px;
@@ -102,7 +95,6 @@ section {
     animation-delay: 3s;
     animation-duration: 3s;
 }
-
 
 /* Box lid slide up animation */
 @keyframes lid {
@@ -114,7 +106,6 @@ section {
         top: -100px;
     }
 }
-
 
 /* External lid wrapper */
 .lidWrapper,
@@ -145,7 +136,6 @@ section {
 }
 
 /* Internal lid wrapper */
-
 .leftInternalTie {
     background: #fac464;
     margin: -28px 80px;
@@ -170,7 +160,6 @@ section {
 }
 
 /* All Ties styling  */
-
 .rightInternalTie:before,
 .rightInternalTie:after,
 .leftInternalTie:before,
@@ -220,19 +209,32 @@ section {
     transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
 }
 
-/* Mcafee style */
+/* Text Style  */
+.text {
+    color: red;
+    z-index: -1;
+    text-align: center;
+    position: relative;
+    bottom: 190px;
+    animation-name: text;
+}
 
+@keyframes text {
+    0% {
+        bottom: 190px;
+    }
+
+    100% {
+        bottom: 400px;
+    }
+}
+
+/* box content animation settings */
+.text,
 .mcafee {
     position: relative;
-    /* top: 55%; */
-    bottom: 166px;
-    z-index: -1;
-    left: 15%;
-    animation-name: mcafee;
     animation-delay: 3s;
     animation-duration: 3s;
-
-
     -webkit-animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
     -ms-animation-fill-mode: forwards;
@@ -240,26 +242,30 @@ section {
     animation-fill-mode: forwards;
 }
 
+/* Mcafee style */
+.mcafee {
+    bottom: 250px;
+    z-index: -1;
+    left: 15%;
+    animation-name: mcafee;
+}
+
 /* Box lid slide up animation */
 @keyframes mcafee {
     0% {
-        bottom: 166px;
+        bottom: 250px;
     }
 
     100% {
-        bottom: 266px;
+        bottom: 378px;
     }
-}
-
-/* Text Style  */
-.text {
-    color: red;
-    text-align: center;
 }
 
 /* Create the light style  */
 .light {
-
+    position: relative;
+    top: 645px;
+    right: 100px;
     display: inline-block;
     overflow: hidden;
     margin: 0 3em;
@@ -279,6 +285,25 @@ section {
 
 .lightPlaceholder {
     transform: rotate(180deg);
-    height: 15em;
+    z-index: -50;
     margin: auto;
+}
+
+/* Confetti Style */
+
+
+[class|="confetti"] {
+    position: absolute;
+}
+
+.red {
+    background-color: #E94A3F;
+}
+
+.yellow {
+    background-color: #FAA040;
+}
+
+.blue {
+    background-color: #5FC9F5;
 }
