@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fac464;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -217,6 +218,7 @@ section {
     position: relative;
     bottom: 190px;
     animation-name: text;
+
 }
 
 @keyframes text {
@@ -225,7 +227,7 @@ section {
     }
 
     100% {
-        bottom: 400px;
+        bottom: 425px;
     }
 }
 
@@ -244,7 +246,7 @@ section {
 
 /* Mcafee style */
 .mcafee {
-    bottom: 250px;
+    bottom: 300px;
     z-index: -1;
     left: 15%;
     animation-name: mcafee;
@@ -253,24 +255,24 @@ section {
 /* Box lid slide up animation */
 @keyframes mcafee {
     0% {
-        bottom: 250px;
+        bottom: 300px;
     }
 
     100% {
-        bottom: 378px;
+        bottom: 425px;
     }
 }
 
 /* Create the light style  */
 .light {
     position: relative;
-    top: 645px;
+    top: 735px;
     right: 100px;
     display: inline-block;
     overflow: hidden;
-    margin: 0 3em;
-    width: 18rem;
-    height: 15rem;
+    margin: 0 2em;
+    width: 20rem;
+    height: 18rem;
     transform: rotate(60deg) skewX(30deg);
 }
 
@@ -291,6 +293,12 @@ section {
 
 /* Confetti Style */
 
+.confettiBox {
+    width: 180px;
+    height: 300px;
+    background: red;
+    z-index: -1;
+}
 
 [class|="confetti"] {
     position: absolute;

@@ -2,7 +2,6 @@ window.onload = function () {
     var lid = document.querySelector(".lidTieContainer");
     var light = document.querySelector(".lightPlaceholder");
 
-
     /*  Set Timeouts */
     // Hide  the box lid after animation ends
     setTimeout(function () {
@@ -11,10 +10,10 @@ window.onload = function () {
     // Set light background and Confetti when box opens 
     setTimeout(function () {
         light.innerHTML = "<div class='light'></div>";
+        // light.innerHTML = "<div class='confettiBox'></div>";
+
         addConfetti();
     }, 3200);
-
-
 
     function addConfetti() {
         // Add confetti
@@ -43,7 +42,7 @@ window.onload = function () {
                 "left": Math.random() * 100 + "%",
                 "opacity": Math.random() + 0.5,
                 "transform": "rotate(" + Math.random() * 360 + "deg)"
-            }).appendTo('.light');
+            }).appendTo('.confettiBox');
 
             drop(i);
         }
@@ -52,18 +51,11 @@ window.onload = function () {
             $('.confetti-' + x).animate({
                 top: "100%",
                 left: "+=" + Math.random() * 15 + "%"
-            }, Math.random() * 3000 + 3000, function () {
-                reset(x);
-            });
-        }
-
-        function reset(x) {
-            $('.confetti-' + x).animate({
-                "top": -Math.random() * 20 + "%",
-                "left": "-=" + Math.random() * 15 + "%"
-            }, 0, function () {
-                // drop(x);
-            });
+            }, Math.random() * 3000 + 3000
+                , function () {
+                    return;
+                }
+            );
         }
     }
 }
