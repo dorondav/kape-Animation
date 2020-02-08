@@ -4,7 +4,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fac464;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -50,7 +49,7 @@ section {
 
 .box {
     position: relative;
-    top: 45%;
+    top: 50%;
     background: repeating-linear-gradient(-45deg,
             #ff4047,
             #ff4047 15px,
@@ -91,7 +90,7 @@ section {
     margin: auto;
     width: 200px;
     position: relative;
-    top: 45%;
+    top: 50%;
     animation-name: lid;
     animation-delay: 3s;
     animation-duration: 3s;
@@ -214,11 +213,10 @@ section {
 .text {
     color: red;
     z-index: -1;
+    font-size: 1.2rem;
     text-align: center;
     position: relative;
-    bottom: 190px;
     animation-name: text;
-
 }
 
 @keyframes text {
@@ -227,7 +225,7 @@ section {
     }
 
     100% {
-        bottom: 425px;
+        bottom: 450px;
     }
 }
 
@@ -235,6 +233,7 @@ section {
 .text,
 .mcafee {
     position: relative;
+    visibility: hidden;
     animation-delay: 3s;
     animation-duration: 3s;
     -webkit-animation-fill-mode: forwards;
@@ -246,7 +245,6 @@ section {
 
 /* Mcafee style */
 .mcafee {
-    bottom: 300px;
     z-index: -1;
     left: 15%;
     animation-name: mcafee;
@@ -259,20 +257,20 @@ section {
     }
 
     100% {
-        bottom: 425px;
+        bottom: 435px;
     }
 }
 
 /* Create the light style  */
 .light {
     position: relative;
-    top: 735px;
+    top: 690px;
     right: 100px;
     display: inline-block;
     overflow: hidden;
-    margin: 0 2em;
-    width: 20rem;
-    height: 18rem;
+    margin: 0 3em;
+    width: 18rem;
+    height: 15rem;
     transform: rotate(60deg) skewX(30deg);
 }
 
@@ -286,19 +284,13 @@ section {
 }
 
 .lightPlaceholder {
+    visibility: hidden;
     transform: rotate(180deg);
     z-index: -50;
     margin: auto;
 }
 
 /* Confetti Style */
-
-.confettiBox {
-    width: 180px;
-    height: 300px;
-    background: red;
-    z-index: -1;
-}
 
 [class|="confetti"] {
     position: absolute;
@@ -314,4 +306,26 @@ section {
 
 .blue {
     background-color: #5FC9F5;
+}
+
+.fade {
+    animation-name: face;
+    /* animation-delay: 5s; */
+
+    -webkit-transition: opacity 3s ease-in-out;
+    -moz-transition: opacity 3s ease-in-out;
+    -ms-transition: opacity 3s ease-in-out;
+    -o-transition: opacity 3s ease-in-out;
+    opacity: 1;
+}
+
+/* Box lid slide up animation */
+@keyframes face {
+    0% {
+        visibility: visible;
+    }
+
+    100% {
+        visibility: hidden;
+    }
 }
