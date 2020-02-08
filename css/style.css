@@ -268,7 +268,7 @@ section {
     right: 100px;
     display: inline-block;
     overflow: hidden;
-    margin: 0 3em;
+    margin: 0 2.5em;
     width: 18rem;
     height: 15rem;
     transform: rotate(60deg) skewX(30deg);
@@ -306,26 +306,4 @@ section {
 
 .blue {
     background-color: #5FC9F5;
-}
-
-.fade {
-    animation-name: face;
-    /* animation-delay: 5s; */
-
-    -webkit-transition: opacity 3s ease-in-out;
-    -moz-transition: opacity 3s ease-in-out;
-    -ms-transition: opacity 3s ease-in-out;
-    -o-transition: opacity 3s ease-in-out;
-    opacity: 1;
-}
-
-/* Box lid slide up animation */
-@keyframes face {
-    0% {
-        visibility: visible;
-    }
-
-    100% {
-        visibility: hidden;
-    }
 }
